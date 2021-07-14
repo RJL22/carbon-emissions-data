@@ -1,5 +1,5 @@
 Country,Gas,Sector,Year,Emissions,Difference in Emissions,% Difference in Emissions,Absolute change since 1990,Percentage change since 1990
-Norway,CO2,Total net emissions with international aviation (EU NDC),1990,"23,599,098",,,0,0.00%
+Norway,CO2,Total net emissions with international aviation (EU NDC),1990,"23,599,098",0,0,0,0.00%
 Norway,CO2,Total net emissions with international aviation (EU NDC),1991,"20,206,286","-3,392,812",-14.38%,"-3,392,812",-14.38%
 Norway,CO2,Total net emissions with international aviation (EU NDC),1992,"21,747,295","1,541,009",7.63%,"-1,851,803",-7.85%
 Norway,CO2,Total net emissions with international aviation (EU NDC),1993,"21,719,472","-27,823",-0.13%,"-1,879,626",-7.96%
