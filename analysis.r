@@ -1,7 +1,6 @@
 library(tidyverse)
 library(ggplot2)
 
-
 norway_data <- read_csv("/Users/ryanlee/Documents/Projects/carbon-emissions-data/raw/norway_table_emissions.csv")
 sweden_data <- read_csv("/Users/ryanlee/Documents/Projects/carbon-emissions-data/raw/sweden_table_emissions.csv")
 
@@ -19,3 +18,7 @@ sweden_gdp_emissions_regression = lm(formula = Emissions ~ Year / gdp, data = sw
 
 names(sweden_data)[10] = 'gdp'
 sweden_gdp_emissions_regression = lm(formula = Emissions ~ Year / gdp, data = sweden_data)
+
+#Scatterplots (emissions per GDP)
+ggplot(norway_data, aes(x = Year, y = Emissions / gdp)) + geom_point()
+ggplot(sweden_data, aes(x = Year, y = Emissions / gdp)) + geom_point()
