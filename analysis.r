@@ -14,7 +14,7 @@ sweden_total_emissions_regression = lm(formula = Emissions ~ Year, data = sweden
 
 #Regression of emissions per GDP
 names(norway_data)[10] = 'gdp'
-sweden_gdp_emissions_regression = lm(formula = Emissions ~ Year / gdp, data = sweden_data)
+norway_gdp_emissions_regression = lm(formula = Emissions ~ Year / gdp, data = norway_data)
 
 names(sweden_data)[10] = 'gdp'
 sweden_gdp_emissions_regression = lm(formula = Emissions ~ Year / gdp, data = sweden_data)
@@ -22,3 +22,10 @@ sweden_gdp_emissions_regression = lm(formula = Emissions ~ Year / gdp, data = sw
 #Scatterplots (emissions per GDP)
 ggplot(norway_data, aes(x = Year, y = Emissions / gdp)) + geom_point()
 ggplot(sweden_data, aes(x = Year, y = Emissions / gdp)) + geom_point()
+
+#Regressions of emissions per capita
+norway_emissions_per_capita_regression = lm(formula = Emissions ~ Year / Population, data = norway_data)
+summary(norway_emissions_per_capita_regression)
+
+sweden_emissions_per_capita_regression = lm(formula = Emissions ~ Year / Population, data = sweden_data)
+summary(sweden_emissions_per_capita_regression)
